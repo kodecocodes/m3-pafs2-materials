@@ -67,7 +67,9 @@ struct RingsView: View {
           .stroke(lineWidth: 20)
           .fill(
             RadialGradient(
-              gradient: Gradient(colors: [Color("RingsColor").opacity(0.3 * 0.8), Color("RingsColor").opacity(0)]),
+              gradient: Gradient(colors: [
+                Color("RingsColor").opacity(0.3 * 0.8), Color("RingsColor").opacity(0),
+              ]),
               center: .center, startRadius: 100, endRadius: 300)
           )
           .frame(width: size, height: size)
@@ -77,5 +79,5 @@ struct RingsView: View {
 }
 
 #Preview {
-    BackgroundView(game: .constant(Game()))
+  BackgroundView(game: .constant(Game()))
 }
