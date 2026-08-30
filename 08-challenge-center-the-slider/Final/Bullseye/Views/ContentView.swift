@@ -93,6 +93,9 @@ struct HitMeButton: View {
 
 #Preview {
   ContentView()
+}
+
+#Preview("Dark Mode") {
   ContentView()
     .preferredColorScheme(.dark)
 }
