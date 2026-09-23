@@ -4,7 +4,7 @@ struct ContentView: View {
   @State private var alertIsVisible = false
   @State private var sliderValue = 50.0
   @State private var game = Game()
-
+  
   var body: some View {
     ZStack {
       BackgroundView(game: $game)
@@ -19,19 +19,17 @@ struct ContentView: View {
 
 struct InstructionsView: View {
   @Binding var game: Game
-
+  
   var body: some View {
-    VStack {
-      InstructionText(text: "🎯🎯🎯\nPut the Bullseye as close as you can to")
-        .padding(.horizontal, 30)
-      BigNumberText(text: String(game.target))
-    }
+    InstructionText(text: "🎯🎯🎯\nPut the Bullseye as close as you can to")
+      .padding(.horizontal, 30)
+    BigNumberText(text: String(game.target))
   }
 }
 
 struct SliderView: View {
   @Binding var sliderValue: Double
-
+  
   var body: some View {
     HStack {
       SliderLabelText(text: "1")
@@ -48,7 +46,7 @@ struct HitMeButton: View {
   @Binding var alertIsVisible: Bool
   @Binding var sliderValue: Double
   @Binding var game: Game
-
+  
   var body: some View {
     Button("Hit me".uppercased()) {
       alertIsVisible = true
